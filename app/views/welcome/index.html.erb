@@ -1,5 +1,5 @@
 <% if current_user != nil %>
-    hello, <%= current_user.j_username %> you have just logged in
+    hello, <%= get_name(current_user) %> you have just logged in
     <%= link_to 'logout', logout_path %>
     <% else %>
    you are not logged  in mate <%= link_to 'login', login_path %>
