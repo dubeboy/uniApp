@@ -1,0 +1,2 @@
+module JobSeekerSessionHelper
+end

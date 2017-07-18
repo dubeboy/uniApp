@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  root 'jsession#new'
+  get    '/login',   to: 'jsession#new'
+  post   '/login',   to: 'jsession#create'
+  delete '/logout',  to: 'jsession#destroy'
 
-  root 'job_seekers#login'
   resources :companies
   resources :job_seekers do
     collection do

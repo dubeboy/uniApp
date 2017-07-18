@@ -16,6 +16,17 @@ class JobSeekersController < ApplicationController
     @job_seeker = JobSeeker.new
   end
 
+  def post_login
+    @job_seeker = JobSeeker.authenticate(params[:email], params[:password])
+    if @job_seeker
+      session[:user_id] = @job_seeker.id
+      redirect_to root_url, :notice => "Logged in!"
+    else
+      flash.now.alert = "Invalid email or password"
+      render "new"
+    end
+  end
+
   # GET /job_seekers/new
   def new
     @job_seeker = JobSeeker.new

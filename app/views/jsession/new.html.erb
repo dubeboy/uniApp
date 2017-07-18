@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:jsession, url: login_path) do |f| %>
+
+        <%= f.label :j_email %>
+        <%= f.email_field :j_email, class: 'form-control', required: true %>
+
+        <%= f.label :j_password %>
+        <%= f.password_field :j_password, class: 'form-control', required: true %>
+
+        <%= f.submit "Log in", class: "btn btn-primary" %>
+        <div >
+          <%= link_to 'Register job seeker',   %>
+        </div>
+    <% end %>
+
+  </div>
+</div>
