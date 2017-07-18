@@ -4,10 +4,10 @@ class JsessionController < ApplicationController
   end
 
   def create
-    @job_seeker = JobSeeker.authenticate(params[:email], params[:password])
+    @job_seeker = JobSeeker.authenticate(params[:jsession][:j_email], params[:jsession][:j_password])
     if @job_seeker
       session[:user_id] = @job_seeker.id
-      redirect_to root_url, :notice => "Logged in!"
+      redirect_to welcome_path, :notice => "Logged in!"
     else
       flash.now.alert = "Invalid email or password"
       render "new"

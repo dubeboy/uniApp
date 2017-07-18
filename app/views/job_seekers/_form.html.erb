@@ -13,27 +13,27 @@
 
   <div class="field">
     <%= form.label :j_email %>
-    <%= form.text_field :j_email, id: :job_seeker_j_email %>
+    <%= form.text_field :j_email, id: :job_seeker_j_email, required: true %>
   </div>
 
   <div class="field">
     <%= form.label :j_username %>
-    <%= form.text_field :j_username, id: :job_seeker_j_username %>
+    <%= form.text_field :j_username, id: :job_seeker_j_username, required: true  %>
   </div>
 
   <div class="field">
     <%= form.label :j_firstname %>
-    <%= form.text_field :j_firstname, id: :job_seeker_j_firstname %>
+    <%= form.text_field :j_firstname, id: :job_seeker_j_firstname, required: true  %>
   </div>
 
   <div class="field">
     <%= form.label :j_lastname %>
-    <%= form.text_field :j_lastname, id: :job_seeker_j_lastname %>
+    <%= form.text_field :j_lastname, id: :job_seeker_j_lastname, required: true  %>
   </div>
 
   <div class="field">
     <%= form.label :j_password %>
-    <%= form.text_field :j_password, id: :job_seeker_j_password %>
+    <%= form.password_field :j_password, id: :job_seeker_j_password, required: true  %>
   </div>
 
   <div class="actions">

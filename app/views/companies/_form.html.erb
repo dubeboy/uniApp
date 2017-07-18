@@ -13,32 +13,32 @@
 
   <div class="field">
     <%= form.label :c_name %>
-    <%= form.text_field :c_name, id: :company_c_name %>
+    <%= form.text_field :c_name, id: :company_c_name, required: true %>
   </div>
 
   <div class="field">
     <%= form.label :c_location %>
-    <%= form.text_field :c_location, id: :company_c_location %>
+    <%= form.text_field :c_location, id: :company_c_location, required: true %>
   </div>
 
   <div class="field">
     <%= form.label :c_email %>
-    <%= form.text_field :c_email, id: :company_c_email %>
+    <%= form.text_field :c_email, id: :company_c_email, required: true %>
   </div>
 
   <div class="field">
     <%= form.label :c_password %>
-    <%= form.text_field :c_password, id: :company_c_password %>
+    <%= form.text_field :c_password, id: :company_c_password, required: true %>
   </div>
 
   <div class="field">
     <%= form.label :c_location %>
-    <%= form.text_field :c_location, id: :company_c_location %>
+    <%= form.text_field :c_location, id: :company_c_location, required: true %>
   </div>
 
   <div class="field">
-    <%= form.label :c_contact_number %>
-    <%= form.number_field :c_contact_number, id: :company_c_contact_number %>
+    <%= form.label :c_number %>
+    <%= form.phone_field :c_number, id: :company_c_number, required: true %>
   </div>
 
   <div class="actions">

@@ -2,6 +2,11 @@ class JobSeeker < ApplicationRecord
   before_save :encrypt_password
   # before_create :generate_token
 
+
+  validates_presence_of :j_username, :j_password, :j_email, :j_firstname, :j_lastname
+  validates_uniqueness_of :j_username
+  validates_length_of :j_password, minimum: 6
+
   def self.authenticate(email, password)
     job_seeker = find_by_j_email(email)
     if job_seeker && job_seeker.password_hash == BCrypt::Engine.hash_secret(password, job_seeker.password_salt)
